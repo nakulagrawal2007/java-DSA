@@ -47,5 +47,6 @@ class calculator {
         int choice = sc.nextInt();
 
         calculate(a, b, choice);
+        sc.close();
     }
 }
