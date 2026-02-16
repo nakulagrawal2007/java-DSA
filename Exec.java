@@ -20,7 +20,9 @@ class NumberTesting{
             sum = sum+fact;
             copy= copy/10;
         }
-        if(sum == Number)return true;
+        if(sum == Number){
+            return true;
+        }
         else return false;
     }
     boolean isArmstrong(int Number){
@@ -42,72 +44,26 @@ class NumberTesting{
             if(sum==Number) return true;
             else return false;
     }
-    boolean isPalindrom(int Number){
-        int rem, copy=Number, rev=0;
-        while(copy>0){
-            rem = copy%10;
-            rev = rev*10+rem;
-            copy= copy/10;
-        }
-        if(rev==Number) return true;
-        else return false;
-
-    }
-    boolean isPerfect(int Number){
-        int sum=0;
-    for(int i=1; i<Number; i++){
-        if(Number%i == 0){
-            sum = sum+i;
-        }
-    }
-    if(sum == Number) return true;
-    else return false;
-    }
-    boolean isAutomorphic(int Number){
-        int square = Number*Number;
-        while (Number>0){
-            if (Number%10!=square%10) return false;
-            Number=Number/10;
-            square=square/10;
-        }
-        return true;
-    }
-    boolean isNeon(int Number){
-        int copy=Number,rem,sum=0;
-        copy=copy*copy;
-        while (copy>0){
-            rem=copy%10;
-            sum=sum+rem;
-            copy=copy/10;
-        }
-        if (sum==Number) return true;
-        else return false;
-    }
-    boolean isHarshad(int Number){
-        int sum=0, copy= Number,rem;
-        while(copy>0){
-            rem=copy%10;
-            sum=sum+rem;
-            copy=copy/10;
-        }
-        if(Number%sum==0)return true;
-        else return false;
-    }
-    boolean isSpy(int Number){
-        int rem, sum=0, pro=1, copy= Number;
-        while (copy>0){
-            rem=copy%10;
-            sum=sum+rem;
-            pro=pro*rem;
-            copy=copy/10;
-        }
-        if (sum==pro) return true;
-        else return false;
-    }
+//    boolean isPalindrom(int Number){
+//
+//    }
+//    boolean isPerfect(int Number){
+//
+//    }
+//    boolean isAutomorphic(int Number){
+//
+//    }
+//    boolean isNeon(int Number){
+//
+//    }
+//    boolean isHarshad(int Number){
+//
+//    }
+//    boolean isSpy(int Number){
+//
+//    }
 //    boolean isSunny(int Number){
-//        Number++;
-//        float result = Math.sqrt(Number);
-//        if(result)
+//
 //    }
 }
 
@@ -120,32 +76,20 @@ public class Exec {
 
         boolean result1 = test.isPrime(input);
         boolean result2 = test.isStrong(input);
-        boolean result3 = test.isAutomorphic(input);
-        boolean result4 = test.isHarshad(input);
-        boolean result5 = test.isNeon(input);
-        boolean result6 = test.isPerfect(input);
-        boolean result7 = test.isPalindrom(input);
-        boolean result8 = test.isSpy(input);
+//        boolean result3 = test.isAutomorphic(input);
+//        boolean result4 = test.isHarshad(input);
+//        boolean result5 = test.isNeon(input);
+//        boolean result6 = test.isPerfect(input);
+//        boolean result7 = test.isPalindrom(input);
+//        boolean result8 = test.isSpy(input);
 //        boolean result9 = test.isSunny(input);
           boolean result10 = test.isArmstrong(input);
 
-        if (result1) {
+        if (result1 == true) {
             System.out.println("Prime Number");}
-        if (result2) {
+        if (result2 == true) {
             System.out.println("Strong Number");}
-        if(result10){
+        if(result10 == true){
             System.out.println("Armstrong Number");}
-        if(result7){
-            System.out.println("Palindrom Number");}
-        if(result6){
-            System.out.println("Perfect Number");}
-        if(result4){
-            System.out.println("Harshad Number");}
-        if(result8){
-            System.out.println("Spy Number");}
-        if(result5){
-            System.out.println("Neon Number");}
-        if(result3){
-            System.out.println("Automorphic Number");}
     }
 }
